@@ -7,17 +7,17 @@ allowed-tools: Read Edit Glob
 
 # AP-Init-Python
 
-Inject Python coding standards into the project's `AGENTS.md`.
+Inject Python coding standards into the project's `AGENTS.md`. Plain text output only.
 
 ## Steps
 
-1. Read `AGENTS.md`. If it doesn't exist, tell the user to run `/ap-init` first.
+1. Read `AGENTS.md`. If missing, tell user to run `/ap-init` first.
 
-2. **Idempotency check:** Check if `**Python Coding Standards**` already exists in `CLAUDE.local.md` or `AGENTS.md`. If Python standards are found in either file, merge/update the content rather than duplicating — preserve any user customizations and add only missing items.
+2. **Idempotency:** If `**Python Coding Standards**` exists in `CLAUDE.local.md` or `AGENTS.md`, merge/update without duplicating. Preserve user customizations.
 
-3. **Determine target file:** Default to `CLAUDE.local.md` (create if missing). Only inject into AGENTS.md if `$ARGUMENTS` contains `--agents-md`.
+3. **Target file:** Default `CLAUDE.local.md` (create if missing). Use AGENTS.md only if `$ARGUMENTS` contains `--agents-md`.
 
-4. Inject the following into the target file (replace HTML comment placeholder if present, or append):
+4. Inject (replace placeholder comment or append):
 
 ```
 - **Python Coding Standards**
@@ -29,4 +29,4 @@ Inject Python coding standards into the project's `AGENTS.md`.
   - Imports: stdlib, blank line, third-party, blank line, local
 ```
 
-5. Print what was added or updated, and where (AGENTS.md or CLAUDE.local.md). Plain text.
+5. Print what was added/updated and where.
