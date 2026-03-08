@@ -1,0 +1,7 @@
+- **Python Coding Standards**
+  - Type hints on all function signatures (params and return types)
+  - Docstrings on public functions/classes (Google style)
+  - snake_case for functions/variables, PascalCase for classes
+  - Prefer f-strings over .format() or %
+  - Use pathlib over os.path
+  - Imports: stdlib, blank line, third-party, blank line, local

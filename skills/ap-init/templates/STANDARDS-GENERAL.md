@@ -1,0 +1,3 @@
+- Keep changes minimal and focused
+- Prefer editing existing files over creating new ones
+- No autocommit — the developer commits when ready

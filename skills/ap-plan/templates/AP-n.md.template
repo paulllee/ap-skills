@@ -1,0 +1,32 @@
+# AP-{{N}}: {{TITLE}}
+
+**Date:** {{DATE}}
+**Status:** {{STATUS}}
+
+## Request
+
+{{REQUEST}}
+
+## Research Summary
+
+{{RESEARCH_SUMMARY}}
+
+## Proposed Approaches
+
+{{APPROACHES}}
+
+## Peer Review (Agent B)
+
+{{PEER_REVIEW}}
+
+## Decision
+
+{{DECISION}}
+
+## Implementation Notes
+
+{{IMPLEMENTATION_NOTES}}
+
+## Files Modified
+
+{{FILES_MODIFIED}}

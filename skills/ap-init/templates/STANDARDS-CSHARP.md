@@ -1,0 +1,7 @@
+- **C# Coding Standards**
+  - Mandatory braces on all control flow (if, else, for, foreach, while, using)
+  - PascalCase for public members, _camelCase for private fields
+  - Enable nullable reference types (`<Nullable>enable</Nullable>`)
+  - XML doc comments on public APIs
+  - Prefer pattern matching over type casting
+  - Prompt the user before modifying `.sln` files

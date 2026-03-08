@@ -1,0 +1,29 @@
+# {{PROJECT_NAME}}
+
+## Project Overview
+
+<!-- Auto-populated by /ap-init -->
+
+## Tech Stack
+
+<!-- Auto-populated by /ap-init -->
+
+## Build Tools
+
+<!-- Auto-populated by /ap-init -->
+
+## Development Standards
+
+### General
+<!-- Auto-populated by /ap-init -->
+
+### Language-Specific
+<!-- Auto-populated by /ap-init -->
+
+## Architecture Decisions
+
+<!-- Record why things are built a certain way so an agent can revisit the reasoning. -->
+
+## Lessons Learned
+
+<!-- One-line discoveries appended by /ap-plan after each run. Do not duplicate entries. -->
