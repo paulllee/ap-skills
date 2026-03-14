@@ -1,6 +1,6 @@
 ---
 name: ap-init-uv
-description: Add uv/ruff/pytest build tooling standards to AGENTS.md.
+description: "Add uv/ruff/pytest build tooling standards to AGENTS.md. Use after /ap-init on Python projects using uv."
 disable-model-invocation: true
 allowed-tools: Read Edit Glob
 ---
@@ -28,3 +28,7 @@ Inject Python build tooling standards (uv, ruff, pytest) into the project's `AGE
 ```
 
 4. Print what was added. Plain text.
+
+## Examples
+
+- `/ap-init-uv`

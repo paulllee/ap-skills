@@ -1,6 +1,6 @@
 ---
 name: ap-init-cs
-description: Add C# coding standards to CLAUDE.local.md — naming, braces, nullability conventions.
+description: "Add C# coding standards to CLAUDE.local.md — naming, braces, nullability conventions. Auto-invoked by /ap-init for C# projects, or run standalone."
 disable-model-invocation: true
 allowed-tools: Read Edit Glob
 ---
@@ -30,3 +30,8 @@ Inject C# coding standards into the project's `CLAUDE.local.md` (or `AGENTS.md` 
 ```
 
 5. Print what was added/updated and where.
+
+## Examples
+
+- `/ap-init-cs`
+- `/ap-init-cs --agents-md`

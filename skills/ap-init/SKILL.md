@@ -39,3 +39,8 @@ Set up the current project for AP-n planning. Prefer tool calls over shell comma
    - Ask user which to run or skip.
 
 10. **Print summary:** Files created/skipped/integrated, build tools found, language standards injected, suggest `/ap-plan <description>`.
+
+## Examples
+
+- `/ap-init`
+- `/ap-init my-api`

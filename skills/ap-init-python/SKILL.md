@@ -1,6 +1,6 @@
 ---
 name: ap-init-python
-description: Add Python coding standards to CLAUDE.local.md — type hints, docstrings, naming conventions.
+description: "Add Python coding standards to CLAUDE.local.md — type hints, docstrings, naming conventions. Auto-invoked by /ap-init for Python projects, or run standalone."
 disable-model-invocation: true
 allowed-tools: Read Edit Glob
 ---
@@ -30,3 +30,8 @@ Inject Python coding standards into the project's `CLAUDE.local.md` (or `AGENTS.
 ```
 
 5. Print what was added/updated and where.
+
+## Examples
+
+- `/ap-init-python`
+- `/ap-init-python --agents-md`

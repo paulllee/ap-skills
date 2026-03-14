@@ -1,6 +1,6 @@
 ---
 name: ap-init-dotnet
-description: Add .NET build tooling standards to AGENTS.md — dotnet CLI, formatting, test commands.
+description: "Add .NET build tooling standards to AGENTS.md — dotnet CLI, formatting, test commands. Use after /ap-init on .NET projects."
 disable-model-invocation: true
 allowed-tools: Read Edit Glob
 ---
@@ -28,3 +28,7 @@ Inject .NET build tooling standards into the project's `AGENTS.md`.
 ```
 
 4. Print what was added. Plain text.
+
+## Examples
+
+- `/ap-init-dotnet`

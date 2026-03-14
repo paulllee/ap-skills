@@ -1,7 +1,7 @@
 ---
 name: ap-plan
 description: "Run the AP-n agentic planning workflow: research, propose solutions, peer-review, user decision, implement."
-argument-hint: "<feature or problem description>"
+argument-hint: "(feature or problem description)"
 disable-model-invocation: true
 allowed-tools: Bash Read Write Edit Glob Grep Agent EnterPlanMode ExitPlanMode
 ---
@@ -49,3 +49,13 @@ Present Research Summary, proposals, and review. Ask the user which approach to 
 5. **Lessons learned:** Append new one-line discoveries to `AGENTS.md` → `## Lessons Learned`. No duplicates.
 6. **Update docs:** Scan README.md, AGENTS.md, and project docs. Update anything stale from implementation. Do NOT touch Lessons Learned or Architecture Decisions. Skip if nothing changed.
 7. **Insights** — always print. Label "Insights:" then: file count and plan number, one bullet per modified file with what changed, any lessons added.
+
+## Troubleshooting
+
+- **No `docs/plans/` directory:** Create it automatically or prompt user to run `/ap-init`.
+- **Agent subagent timeout:** Retry once with a narrower focus area, then proceed with available findings.
+
+## Examples
+
+- `/ap-plan add user authentication`
+- `/ap-plan fix flaky integration tests`

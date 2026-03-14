@@ -23,3 +23,13 @@ Update project docs to reflect recent code changes. Prefer tool calls over shell
    - **Other docs** — Fix stale content, don't rewrite correct content.
 
 4. **Print summary:** One line per file updated. If nothing needed, say so.
+
+## Troubleshooting
+
+- **No git history:** Fall back to scanning all docs for completeness rather than diffing changes.
+- **No docs found:** Report that no documentation files were found; suggest running `/ap-init` first.
+
+## Examples
+
+- `/ap-update-docs`
+- `/ap-update-docs added WebSocket support`

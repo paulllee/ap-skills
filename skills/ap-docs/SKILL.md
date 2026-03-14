@@ -1,7 +1,7 @@
 ---
 name: ap-docs
 description: "Look up documentation for any library or tool. Uses Context7 MCP if available, falls back to WebFetch/curl."
-argument-hint: "<query> [library-name]"
+argument-hint: "(query) [library-name]"
 allowed-tools: mcp__plugin_context7_context7__resolve-library-id mcp__plugin_context7_context7__query-docs WebFetch Bash
 ---
 
@@ -29,3 +29,9 @@ Never fabricate versions, API signatures, or behavior. Say so if authoritative d
 ```
 
 Keep it concise — no padding, no restating the question.
+
+## Examples
+
+- `/ap-docs how to mock in pytest`
+- `/ap-docs useEffect cleanup react`
+- `/ap-docs retry policy polly`
