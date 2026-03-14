@@ -10,7 +10,7 @@ allowed-tools: Bash Read Write Edit Glob Grep Agent EnterPlanMode ExitPlanMode
 
 Run the AP-n planning cycle for: **$ARGUMENTS**
 
-Follow all 5 phases in order. Do not implement before user approval. Track progress with the task list, updating after each phase. No commits. Detect shell before Bash calls. Plain text output only.
+Follow all 5 phases in order. Do not implement before user approval. Track progress with the task list, updating after each phase. No commits. Detect shell before Bash calls — on PowerShell use native equivalents (`Select-Object -Last N` not `tail`, etc.). Plain text output only.
 
 ## Pre-flight
 

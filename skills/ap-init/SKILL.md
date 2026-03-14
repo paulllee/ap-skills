@@ -8,7 +8,7 @@ allowed-tools: Bash Read Write Edit Glob
 
 # AP-Init
 
-Set up the current project for AP-n planning. Prefer tool calls over shell commands. Detect shell before Bash calls. No commits. Plain text output only.
+Set up the current project for AP-n planning. Prefer tool calls over shell commands. Detect shell before Bash calls — on PowerShell use native equivalents (`Select-Object -Last N` not `tail`, etc.). No commits. Plain text output only.
 
 ## Steps
 
