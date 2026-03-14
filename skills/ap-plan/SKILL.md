@@ -12,7 +12,7 @@ Run the AP-n planning cycle for: **$ARGUMENTS**
 
 > **Model tiers:** sonnet → claude-sonnet-4.6 / gemini-3.1-flash (Cursor); opus → claude-opus-4.6 / gemini-3.1-pro (Cursor).
 
-Follow all phases in order. Do not implement before user approval. Track progress with the task list, updating after each phase. No commits. Detect shell before Bash calls — on PowerShell use the `.ps1` variants of scripts below.
+Follow all phases in order. Do not implement before user approval. Track progress with the task list, updating after each phase. **After completing each phase, update `Current Phase` in `PLAN_FILE` to the next phase** (e.g., "Phase 5: Test First") so progress survives context clearing. No commits. Detect shell before Bash calls — on PowerShell use the `.ps1` variants of scripts below.
 
 ## Script helpers
 
@@ -25,10 +25,11 @@ Plan-specific scripts live in `${CLAUDE_SKILL_DIR}/bin/`. Shared scripts live in
 
 ## Pre-flight
 
-1. Run `bash "${CLAUDE_SKILL_DIR}/bin/ap-next-plan.sh"` → capture the output as `PLAN_FILE`.
-2. Run `bash "${CLAUDE_SKILL_DIR}/bin/ap-status.sh"` to display existing plans for context.
-3. Create a task list with all phases (1-4, 4.5, 5-9).
-4. Call `EnterPlanMode` if available — Phases 1-3 run in plan mode.
+1. Run `bash "${CLAUDE_SKILL_DIR}/bin/ap-status.sh"` to check for existing plans.
+2. **Resume check:** If any plan has Status **In Progress**, read it and capture its path as `PLAN_FILE`. Read its **Current Phase** to determine where to resume — skip all earlier phases and continue from that phase.
+3. **New plan:** If no in-progress plan exists, run `bash "${CLAUDE_SKILL_DIR}/bin/ap-next-plan.sh"` → capture the output as `PLAN_FILE`.
+4. Create a task list with all phases (1-4, 4.5, 5-9). If resuming, mark completed phases as done.
+5. Call `EnterPlanMode` if available and starting from Phase 1 — Phases 1-3 run in plan mode.
 
 ## Phase 1: Research
 
@@ -54,7 +55,7 @@ Present Research Summary, proposals, and review. Ask the user which approach to 
 
 ## Phase 4.5: Write Plan
 
-Before implementing, write the plan to `PLAN_FILE` (captured in Pre-flight). Read `${CLAUDE_SKILL_DIR}/templates/AP-n.md.template`, fill it from the phase outputs collected so far (set Status to **In Progress**), and write to `PLAN_FILE`. Additionally fill in:
+Before implementing, write the plan to `PLAN_FILE` (captured in Pre-flight). Read `${CLAUDE_SKILL_DIR}/templates/AP-n.md.template`, fill it from the phase outputs collected so far (set Status to **In Progress**, Current Phase to **Phase 5: Test First**), and write to `PLAN_FILE`. Additionally fill in:
 
 - **Acceptance Criteria** — concrete, testable requirements derived from the chosen approach
 - **Implementation Steps** — numbered work units with: description, files involved, dependencies on other steps

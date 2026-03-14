@@ -2,6 +2,7 @@
 
 **Date:** {{DATE}}
 **Status:** {{STATUS}}
+**Current Phase:** {{CURRENT_PHASE}}
 
 ## Request
 
