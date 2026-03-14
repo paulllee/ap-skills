@@ -2,13 +2,13 @@
 
 ## Project Overview
 
-A distributable skill system for the AP-n agentic planning pattern, following the Agent Skills open standard. Skills live in `~/.claude/skills/` and are auto-discovered by both Claude Code and Cursor. Includes skills for project initialization, planning workflows, documentation updates, and language-specific standards.
+A distributable skill system for the AP-n agentic planning pattern, following the Agent Skills open standard. Skills are installed to both `~/.claude/skills/` and `~/.cursor/skills/` so they're auto-discovered by Claude Code and Cursor. Includes skills for project initialization, planning workflows, documentation updates, and language-specific standards.
 
 ## Tech Stack
 
 - Shell (Bash/PowerShell install scripts)
 - Markdown (skill definitions, templates, documentation)
-- Claude Code skills system (`~/.claude/skills/`)
+- Claude Code / Cursor skills system (`~/.claude/skills/`, `~/.cursor/skills/`)
 
 ## Build Tools
 

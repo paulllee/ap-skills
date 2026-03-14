@@ -1,6 +1,6 @@
 # ap-skills
 
-A distributable skill system for the AP-n agentic planning pattern, following the [Agent Skills open standard](https://agentskills.io). Skills live in `~/.claude/skills/` and are auto-discovered by both Claude Code and Cursor — one install, both tools.
+A distributable skill system for the AP-n agentic planning pattern, following the [Agent Skills open standard](https://agentskills.io). Skills are installed to both `~/.claude/skills/` and `~/.cursor/skills/` so they're auto-discovered by Claude Code and Cursor — one install, both tools.
 
 ## Skills
 
@@ -27,7 +27,7 @@ Windows (PowerShell):
 .\install.ps1
 ```
 
-Both scripts copy `skills/*/` into `~/.claude/skills/`.
+Both scripts copy `skills/*/` into `~/.claude/skills/` and `~/.cursor/skills/`.
 
 ## Cross-IDE Strategy
 
