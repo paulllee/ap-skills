@@ -33,9 +33,9 @@ Set up the current project for AP-n planning. Prefer tool calls over shell comma
 
 8. **Create `docs/plans/`** directory.
 
-9. **Suggest language sub-skills:** Detect project type and suggest matching skills:
-   - Python signals → `/ap-init-python`, `/ap-init-uv`
-   - C#/.NET signals → `/ap-init-cs`, `/ap-init-dotnet`
-   - Basic standards already injected in 5c; these are optional extras. Ask user which to run or skip.
+9. **Suggest optional sub-skills:** Language standards (Python, C#) were already injected in 5c. Only offer tooling-specific extras:
+   - Python project detected → offer `/ap-init-uv`
+   - C#/.NET project detected → offer `/ap-init-dotnet`
+   - Ask user which to run or skip.
 
 10. **Print summary:** Files created/skipped/integrated, build tools found, language standards injected, suggest `/ap-plan <description>`.
