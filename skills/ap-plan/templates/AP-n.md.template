@@ -23,9 +23,29 @@
 
 {{DECISION}}
 
+## Acceptance Criteria
+
+{{ACCEPTANCE_CRITERIA}}
+
+## Implementation Steps
+
+{{IMPLEMENTATION_STEPS}}
+
+## Test Plan
+
+{{TEST_PLAN}}
+
 ## Implementation Notes
 
 {{IMPLEMENTATION_NOTES}}
+
+## Code Review
+
+{{CODE_REVIEW}}
+
+## Performance Results
+
+{{PERFORMANCE_RESULTS}}
 
 ## Files Modified
 
