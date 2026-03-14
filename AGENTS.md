@@ -21,6 +21,9 @@ No build tools detected. Install via `bash install.sh` (macOS/Linux) or `.\insta
 - Prefer editing existing files over creating new ones
 - No autocommit — the developer commits when ready
 - Keep skill definitions slim — every line costs tokens at invocation
+- Prefer creating scripts over agent invocation
+- When adding or modifying any `.sh` or `.ps1` script, keep both the bash and PowerShell versions in sync
+- If both `bash` and `pwsh` are available on the current system, run syntax checks (`bash -n` / `pwsh` parser) and a functional test on both variants before considering the change complete. If only one shell is available, verify that one and keep the other script logically consistent via code review
 
 ### Language-Specific
 No language-specific standards applicable.

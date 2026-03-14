@@ -14,14 +14,16 @@ Follow all 5 phases in order. Do not implement before user approval. Track progr
 
 ## Script helpers
 
-All scripts live in `${CLAUDE_SKILL_DIR}/bin/`. Use these instead of manual glob/parse logic.
+Plan-specific scripts live in `${CLAUDE_SKILL_DIR}/bin/`. Shared scripts live in `${CLAUDE_SKILL_DIR}/../ap-lib/bin/`.
 
 - **ap-next-plan.sh / .ps1** — Creates `docs/plans/` if needed, finds the next AP-N number, creates the file, prints the absolute path to stdout.
 - **ap-status.sh / .ps1** — Parses all existing AP-*.md plans and prints one line per plan: `path | title | date | status`.
+- **append-lessons.sh / .ps1** — Appends a lesson to `## Lessons Learned` in AGENTS.md with deduplication. Usage: `append-lessons.sh "lesson text"`. Exits 2 if duplicate.
+- **list-docs.sh / .ps1** — Lists documentation files with line counts. Output: `path | size_lines` per line.
 
 ## Pre-flight
 
-1. Run `bash "${CLAUDE_SKILL_DIR}/bin/ap-next-plan.sh"` (or `.ps1` on PowerShell) → capture the output as `PLAN_FILE`.
+1. Run `bash "${CLAUDE_SKILL_DIR}/bin/ap-next-plan.sh"` → capture the output as `PLAN_FILE`.
 2. Run `bash "${CLAUDE_SKILL_DIR}/bin/ap-status.sh"` to display existing plans for context.
 3. Create a task list with all 5 phases.
 4. Call `EnterPlanMode` if available — Phases 1-3 run in plan mode.
@@ -58,8 +60,8 @@ Before implementing, write the plan to `PLAN_FILE` (captured in Pre-flight). Rea
 2. Implement chosen approach per `AGENTS.md` conventions.
 3. Run lint/format/test commands if specified in `AGENTS.md`.
 4. **Update plan:** Re-read `PLAN_FILE`, fill in Implementation Notes and Files Modified, set Status to **Complete**, and write back.
-5. **Lessons learned:** Append new one-line discoveries to `AGENTS.md` → `## Lessons Learned`. No duplicates.
-6. **Update docs:** Scan README.md, AGENTS.md, and project docs. Update anything stale from implementation. Do NOT touch Lessons Learned or Architecture Decisions. Skip if nothing changed.
+5. **Lessons learned:** For each lesson, run `bash "${CLAUDE_SKILL_DIR}/../ap-lib/bin/append-lessons.sh" "lesson text"`. The script handles deduplication.
+6. **Update docs:** Run `bash "${CLAUDE_SKILL_DIR}/../ap-lib/bin/list-docs.sh"` to find docs. Update anything stale from implementation. Do NOT touch Lessons Learned or Architecture Decisions. Skip if nothing changed.
 7. **Insights** — always print. Label "Insights:" then: file count and plan number, one bullet per modified file with what changed, any lessons added.
 
 ## Troubleshooting
